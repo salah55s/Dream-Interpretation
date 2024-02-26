@@ -1,5 +1,6 @@
 pypdf
 cohere
+faiss-cpu
 langchain
 langchain_community
 langchain_core
