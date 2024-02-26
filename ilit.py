@@ -26,16 +26,13 @@ def create_faiss_index(pages):
 def main():
     st.title("Dream Interpretation with Langchain")
     st.write("Enter your dream in Arabic and let Langchain interpret it!")
-
-    # Get user input
-    user_ask = st.text_input("ما هو حلمك؟")
-
     # Load PDF document
     pages = load_document("Noortryyy.pdf")
-
     # Create FAISS index
     faiss_index = create_faiss_index(pages)
-
+    # Get user input
+    user_ask = st.text_input("ما هو حلمك؟")
+    
     if st.button("Interpret Dream"):
         text_contents = []
 
