@@ -28,7 +28,7 @@ def main():
     st.write("Enter your dream in Arabic and let Langchain interpret it!")
 
     # Get user input
-    user_ask = st.text_input("ماذا حلمت؟")
+    user_ask = st.text_input("ما هو حلمك؟")
 
     # Load PDF document
     pages = load_document("Noortryyy.pdf")
