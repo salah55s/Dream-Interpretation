@@ -48,7 +48,7 @@ def main():
             text_contents.append(text_content)
 
         # Concatenate text contents
-        concatenated_texts = [text_content + " (رد بمساعده المعلومات المعطاه في تفسير الاحلام ودائما انهى الرد بكلمة (والله اعلم" for text_content in text_contents]
+        concatenated_texts = [text_content + "رد بمساعده المعلومات المعطاه في تفسير الاحلام ودائما انهى الرد بكلمة والله اعلم" for text_content in text_contents]
 
         # Initialize Google GenAI model
         model = ChatGoogleGenerativeAI(model="gemini-pro", convert_system_message_to_human=True)
