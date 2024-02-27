@@ -35,7 +35,7 @@ def main():
         text_contents = []
 
         # Similarity search
-        docs = faiss_index.similarity_search(user_ask, k=40)
+        docs = faiss_index.similarity_search(user_ask, k=25)
 
         # Extract text content from each document
         for doc in docs:
