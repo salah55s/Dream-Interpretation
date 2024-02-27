@@ -27,9 +27,7 @@ def main():
     st.title("Dream Interpretation with Langchain")
     st.write("Enter your dream in Arabic and let Langchain interpret it!")
     # Load PDF document
-    pages = load_document("Noortryyy.pdf")
-    # Create FAISS index
-    faiss_index = create_faiss_index(pages)
+    faiss_index = FAISS.load_local("faiss_index", CohereEmbeddings())
     # Get user input
     user_ask = st.text_input("ما هو حلمك؟")
     
@@ -45,7 +43,7 @@ def main():
             text_contents.append(text_content)
 
         # Concatenate text contents
-        concatenated_texts = [text_content + "رد بمساعده المعلومات المعطاه في تفسير الحلم ودائما انهى الرد بكلمة والله اعلم  واجعل الكلام شيق ومثير واحكى ككقصه ممتتاليه من الاحداث" for text_content in text_contents]
+        concatenated_texts = [text_content + "رد بمساعده المعلومات المعطاه في تفسير الحلم ودائما انهى الرد بكلمة والله اعلم وفسرالاحداث كلها وأربط بينهم" for text_content in text_contents]
 
         # Initialize Google GenAI model
         model = ChatGoogleGenerativeAI(model="gemini-pro", convert_system_message_to_human=True)
