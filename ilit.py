@@ -7,9 +7,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, SystemMessage
 
 # Set environment variables for API keys
-os.environ["COHERE_API_KEY"] = "E8VciuGHL9Vy0poINgL8E9iht8oJ8kBFNm9LJTQp"
+os.environ["COHERE_API_KEY"] = "############################"
 if "GOOGLE_API_KEY" not in os.environ:
-    os.environ["GOOGLE_API_KEY"] = "AIzaSyB_HEc-iwJd3X9qohdi8RtV5Y1_yQMpMbk"
+    os.environ["GOOGLE_API_KEY"] = "########################"
 
 # Load PDF document
 def load_document(file_path):
